@@ -14,5 +14,15 @@
     "url": "https://ksufinski@bitbucket.org/ksufinski/ardasapp.git)"
   },
   "author": "Mukha Dmitry",
-  "license": "ISC"
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-mocks": "^1.5.5",
+    "angular-route": "^1.5.5"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-jasmine": "^0.3.8"
+  }
 }
