@@ -1,8 +1,8 @@
 (function () {
-	angular
-		.module('ardasApp')
-		.controller('taskCtrl', taskCtrl);
+  angular
+  .module('ardasApp')
+  .controller('taskCtrl', taskCtrl);
 
-	function taskCtrl(){}
+  function taskCtrl() {}
 
 })();

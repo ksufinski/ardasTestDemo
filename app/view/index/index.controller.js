@@ -1,8 +1,8 @@
 (function () {
-	angular
-	.module('ardasApp')
-	.controller('indexCtrl', indexCtrl);
+  angular
+  .module('ardasApp')
+  .controller('indexCtrl', indexCtrl);
 
-	function indexCtrl(){}
+  function indexCtrl() {}
 
 })();
