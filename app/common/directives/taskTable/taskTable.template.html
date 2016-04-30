@@ -14,7 +14,8 @@
 				<td>{{task.tags.join(', ')}}</td>
 				<td>{{task.actual_effort}}</td>
 				<td>{{task.estimated_effort}}</td>
-				<td>{{task.due_date | date}}</td>
+				<td>{{task.due_date | customDate}}</td>
+				<!--<td>{{task.due_date | date}}</td>-->
 			</tr>
 	</tbody>
 		</thead>

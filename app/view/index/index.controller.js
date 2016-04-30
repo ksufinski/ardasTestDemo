@@ -1,9 +1,10 @@
 var ardasIndexController = angular.module('ardasIndexController', []);
 
-ardasIndexController.controller('indexCtrl', ['$http',
-function($http){
+ardasIndexController.controller('indexCtrl', ['$http', 'taskService',
+function($http, taskService, $filter){
 	var vm = this;
-	$http.get('/tasks').then(function(data){
+
+	taskService.getTasks().then(function(data){
 		vm.tasks = data.data;
-	})
+	});
 }]);

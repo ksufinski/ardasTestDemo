@@ -4,7 +4,9 @@ var app = angular.module('ardasApp', ['ngRoute',
 	'ardasIndexController',
 	'ardasTaskController',
 	'backendMock',
-	'angularInlineEdit',]);
+	'angularInlineEdit',
+	'taskService',
+	'angularFilter']);
 
 app.config(['$routeProvider',
 	function ($routeProvider) {

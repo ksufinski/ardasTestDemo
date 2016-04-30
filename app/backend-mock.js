@@ -346,13 +346,6 @@ backendMock.run(function($httpBackend){
 		}];
 	});
 
-
-	$httpBackend.whenGET('../task.json').passThrough();
-	$httpBackend.whenGET('view/index/index.view.html').passThrough();
-	$httpBackend.whenGET('view/task/task.view.html').passThrough();
-	$httpBackend.whenGET('common/directives/taskDetail/taskDetail.template.html').passThrough();
-	$httpBackend.whenGET('common/directives/navigation/navigation.template.html').passThrough();
-	$httpBackend.whenGET('common/directives/taskTable/taskTable.template.html').passThrough();
-
+	$httpBackend.whenGET(/\bhtml\b/).passThrough();
 
 });
