@@ -1,7 +1,9 @@
 var ardasIndexController = angular.module('ardasIndexController', []);
 
-ardasIndexController.controller('indexCtrl', ['Task',
-function(Task){
+ardasIndexController.controller('indexCtrl', ['$http',
+function($http){
 	var vm = this;
-	vm.tasks = Task.query();
+	$http.get('/tasks').then(function(data){
+		vm.tasks = data.data;
+	})
 }]);

@@ -1,7 +1,7 @@
 var backendMock = angular.module('backendMock', ['ardasApp','ngMockE2E']);
 backendMock.run(function($httpBackend){
 
-	var id ;
+	var id, res;
 
 	function getTaskByID(url){
 		var tempArr = url.match(/[0-9]*/g);
@@ -9,10 +9,10 @@ backendMock.run(function($httpBackend){
 			if (Number(el))
 			return el;
 		});
-		/*var res = tasks.filter(function(task){
+		res = tasks.filter(function(task){
 			return task.id == id;
-		});*/
-		return id;
+		});
+		return res;
 	}
 
 	var tasks = [
@@ -336,17 +336,18 @@ backendMock.run(function($httpBackend){
 		}
 	];
 
-	//$httpBackend.whenGET('/tasks').respond(tasks);
+	$httpBackend.whenGET('/tasks').respond(tasks);
 
 	$httpBackend.whenRoute( 'GET', '/tasks/:id').respond(function(method, url, data, headers, params){
 	var task = getTaskByID(url);
-		//console.log(tasks[id]);
+
 		return [ 200, {
-			taskParams: tasks[id]
+			taskParams: res
 		}];
 	});
 
 
+	$httpBackend.whenGET('../task.json').passThrough();
 	$httpBackend.whenGET('view/index/index.view.html').passThrough();
 	$httpBackend.whenGET('view/task/task.view.html').passThrough();
 	$httpBackend.whenGET('common/directives/taskDetail/taskDetail.template.html').passThrough();

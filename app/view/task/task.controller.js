@@ -4,6 +4,6 @@ ardasTaskController.controller('taskCtrl', ['$routeParams', 'Task',
   var vm = this;// jscs:ignore safeContextKeyword
   Task.get({id:$routeParams.id})
 		.$promise.then(function(task){
-		vm.task = [task.taskParams.id, task.taskParams.name, task.taskParams.description];
+		vm.task = [task.taskParams[0].id, task.taskParams[0].name, task.taskParams[0].description];
 	});
 	},]);
