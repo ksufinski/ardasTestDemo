@@ -1,5 +1,8 @@
 {
-  "preset": "google"
-
-
+  "preset": "google",
+  "maxErrors": 500,
+  "excludeFiles": [
+    "./app/view/index/index.controller.js",
+    "./app/common/services/ardasData.service.js"
+  ]
 }

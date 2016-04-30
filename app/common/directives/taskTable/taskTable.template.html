@@ -1,2 +1,23 @@
-<div class="col-xs-10 col-xs-offset-1">table</div>
+<div class="col-xs-10 col-xs-offset-1">
+	<table class="table table-hover">
+		<thead>
+		<tr>
+			<th>Name</th>
+			<th>Tags</th>
+			<th>Actual effort</th>
+			<th>Estimated effort</th>
+			<th>Due date</th>
+		</tr>
+		<tbody>
+			<tr ng-repeat="task in index.tasks | filter:{obj_status: 'active'} " ng-class="task.is_high_priority ? 'success' : ''">
+				<td><a href="#/task/{{task.id}}">{{task.name}}</a></td>
+				<td>{{task.tags.join(', ')}}</td>
+				<td>{{task.actual_effort}}</td>
+				<td>{{task.estimated_effort}}</td>
+				<td>{{task.due_date | date}}</td>
+			</tr>
+	</tbody>
+		</thead>
+	</table>
+</div>
 
