@@ -12,7 +12,7 @@ npm start
 ```
 And open at ```localhost:8000/app/index.html#/```
 
-For running test use 
+For running tests use 
 ```
 npm test
 ```
