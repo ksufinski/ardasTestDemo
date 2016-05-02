@@ -13,7 +13,7 @@ module.exports = function(config) {
       'node_modules/angular-resource/angular-resource.min.js',
       'node_modules/angular-mocks/angular-mocks.js',
       'test/backend-mock.js',
-      'bower_components/ng-inline-edit/dist/ng-inline-edit.min.js',
+      'node_modules/ng-inline-edit/dist/ng-inline-edit.min.js',
 
       'app/**/*.js',
       'test/**/*Spec.js'
