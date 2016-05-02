@@ -14,14 +14,13 @@
   "scripts": {
     "start": "http-server -a localhost -p 8000 -c-1",
     "pretest": "npm install",
-    "test": "node node_modules/karma/bin/karma start test/karma.conf.js",
+    "test": "node node_modules/karma/bin/karma start karma.conf.js",
     "test-single-run": "node node_modules/karma/bin/karma start test/karma.conf.js  --single-run"
   },
   "repository": {
     "type": "git",
     "url": "https://ksufinski@bitbucket.org/ksufinski/ardasapp.git)"
   },
-  "author": "Mukha Dmitry",
   "dependencies": {
     "angular": "^1.5.5",
     "angular-mocks": "^1.5.5",
