@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="ardasApp">
+<head>
+	<meta charset="UTF-8" name='viewport'
+				content='width=device-width, initial-scale=1.0'>
+	<title>Title</title>
+	<link rel="stylesheet"
+				href="../node_modules/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet"
+				href="../node_modules/ng-inline-edit/dist/ng-inline-edit.min.css">
+</head>
+<body ng-view>
+<script src="../node_modules/angular/angular.js"></script>
+<script src="../node_modules/angular-route/angular-route.js"></script>
+<script src="../node_modules/angular-resource/angular-resource.js"></script>
+<script src="../node_modules/angular-mocks/angular-mocks.js"></script>
+<script	src="../node_modules/ng-inline-edit/dist/ng-inline-edit.min.js"></script>
+<script src="app.js"></script>
+<script src="../test/backend-mock.js"></script>
+<script src="view/index/index.controller.js"></script>
+<script src="view/task/task.controller.js"></script>
+<script src="common/directives/taskTable/taskTable.directive.js"></script>
+<script src="common/directives/taskDetail/taskDetail.directive.js"></script>
+<script src="common/directives/navigation/navigation.directive.js"></script>
+<script src="common/services/ardasData.service.js"></script>
+<script src="common/filters/customDate.filter.js"></script>
+</body>
+</html>
