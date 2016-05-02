@@ -337,9 +337,10 @@ backendMock.run(function($httpBackend){
 	];
 
 	$httpBackend.whenGET('/tasks').respond(tasks);
+	$httpBackend.whenPUT('/tasks/11/name').respond('s');
 
 	$httpBackend.whenRoute( 'GET', '/tasks/:id').respond(function(method, url, data, headers, params){
-	var task = getTaskByID(url);
+	getTaskByID(url);
 
 		return [ 200, {
 			taskParams: res

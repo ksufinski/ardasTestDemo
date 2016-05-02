@@ -6,7 +6,10 @@ var app = angular.module('ardasApp', ['ngRoute',
 	'backendMock',
 	'angularInlineEdit',
 	'taskService',
-	'angularFilter']);
+	'angularFilter',]);
+
+var appTest = angular.module("ardasTest_Tests",['ngMock']);
+
 
 app.config(['$routeProvider',
 	function ($routeProvider) {

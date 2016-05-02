@@ -1,9 +1,8 @@
-var angularFilter = angular.module('angularFilter', []);
-
-angularFilter.filter('customDate', function(){
+angular.module('angularFilter', []).filter('customDate', function(){
 	return function (input) {
 		var res = undefined;
 		var date = [];
+
 		if(input){
 			date[0] = String(input.substr(0,4));
 			date[1] = String(input.substr(4,3));
